@@ -5,6 +5,8 @@ In this tutorial, you will learn to create the whac a mole game with java using 
 
 While creating this mario themed whac-a-mole game, you will learn how to create a graphical user interface (GUI) using java's swing library, add click handlers to whack the mole, and randomly spawn the mole and piranha plant using the Timer and Random modules.
 
+[How to setup Java with Visual Studio Code](https://youtu.be/BB0gZFpukJU)
+
 ![whac-a-mole-demo](https://github.com/ImKennyYip/whac-a-mole-java/assets/78777681/2ab3fbd3-60ba-48a1-876b-9f4039d56140)
 
 ## Homework:
