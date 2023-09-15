@@ -7,12 +7,12 @@ public class WhacAMole {
     int boardWidth = 600;
     int boardHeight = 650; //50 for the text panel on top
 
-	JFrame frame = new JFrame("Mario: Whac A Mole");
+    JFrame frame = new JFrame("Mario: Whac A Mole");
     JLabel textLabel = new JLabel();
-	JPanel textPanel = new JPanel();
-	JPanel boardPanel = new JPanel(); 
+    JPanel textPanel = new JPanel();
+    JPanel boardPanel = new JPanel(); 
 	
-	JButton[] board = new JButton[9];
+    JButton[] board = new JButton[9];
     ImageIcon moleIcon;
     ImageIcon plantIcon;
 
@@ -26,22 +26,22 @@ public class WhacAMole {
 
     WhacAMole() {
         // frame.setVisible(true);
-		frame.setSize(boardWidth, boardHeight);
+	frame.setSize(boardWidth, boardHeight);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
-		textLabel.setFont(new Font("Arial", Font.PLAIN, 50));
-		textLabel.setHorizontalAlignment(JLabel.CENTER);
-		textLabel.setText("Score: " + Integer.toString(score));
-		textLabel.setOpaque(true);
+	textLabel.setFont(new Font("Arial", Font.PLAIN, 50));
+	textLabel.setHorizontalAlignment(JLabel.CENTER);
+	textLabel.setText("Score: " + Integer.toString(score));
+	textLabel.setOpaque(true);
 
         textPanel.setLayout(new BorderLayout());
         textPanel.add(textLabel);		
         frame.add(textPanel, BorderLayout.NORTH);
 
-		boardPanel.setLayout(new GridLayout(3, 3));
+	boardPanel.setLayout(new GridLayout(3, 3));
         // boardPanel.setBackground(Color.black);
         frame.add(boardPanel);
 
@@ -52,7 +52,7 @@ public class WhacAMole {
         Image moleImg = new ImageIcon(getClass().getResource("./monty.png")).getImage();
         moleIcon = new ImageIcon(moleImg.getScaledInstance(150, 150, java.awt.Image.SCALE_SMOOTH));
 		
-		for (int i = 0; i < 9; i++) {
+	for (int i = 0; i < 9; i++) {
             JButton tile = new JButton();
             board[i] = tile;
             boardPanel.add(tile);
@@ -76,7 +76,7 @@ public class WhacAMole {
                     }
                 }
             });
-		}
+	}
 
         setMoleTimer = new Timer(1000, new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -129,8 +129,7 @@ public class WhacAMole {
 
 /*
  * Homework
+ * - Add Multiple Piranha plants and store them in an Array
  * - Add Button on the bottom to restart game
- * - Randomize starting player (hint: use java.util.random)
- * - Keep track of score and display it on the bottom using
- * -
+ * - Keep track of high score and display it
  */
